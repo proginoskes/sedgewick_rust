@@ -1,6 +1,5 @@
 use std::env;
 use std::fs;
-use std::sync::Arc;
 
 mod algorithms{
     pub mod gcd;
@@ -45,5 +44,5 @@ fn main() -> Result<(),&'static str> {
         )
     };
 
-    algorithms::gcd::euclid::run(Arc::<String>::new(contents))
+    algorithms::gcd::euclid::run(&contents)
 }
